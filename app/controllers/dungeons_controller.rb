@@ -1,0 +1,2 @@
+class DungeonsController < ApplicationController
+end

@@ -1,0 +1,95 @@
+grey1 = rgb(75, 72, 69)
+grey2 = rgb(127, 119, 115)
+grey3 = rgb(151, 143, 139)
+grey4 = rgb(218, 214, 211)
+grey5 = rgb(234, 231, 229)
+grey6 = rgb(239, 235, 231)
+grey7 = rgb(241, 238, 235)
+grey8 = rgb(188, 182, 179)
+purple1 = rgb(113, 44, 107)
+purple2 = rgb(74, 34, 68)
+slate1 = rgb(83, 98, 111)
+gold1 = rgb(177, 150, 82)
+gold2 = rgb(192, 171, 116)
+gold3 = rgb(224, 213, 186)
+red1 = rgb(202, 66, 54)
+blue1 = rgb(32, 138, 158)
+blue2 = rgb(188, 214, 220)
+blue3 = rgb(210, 229, 234)
+green1 = rgb(115, 133, 125)
+green2 = rgb(143, 157, 151)
+green3 = rgb(199, 206, 203)
+white1 = rgb(255, 255, 255)
+black1 = rgb(0, 0, 0)
+semi-opaque = rgba(0, 0, 0, 0.3)
+orange1 = rgb(244, 157, 152)
+
+font-src(name1, name2, woffFile, woff2File) {
+  src: local(name1),
+       local(name2),
+       url(../fonts/open-sans/ + woff2File) format('woff2'),
+       url(../fonts/open-sans/ + woffFile) format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-src('Open Sans Light', 'OpenSans-Light',
+           'DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff',
+           'DXI1ORHCpsQm3Vp6mXoaTegdm0LZdjqr5-oayXSOefg.woff2');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-src('Open Sans', 'OpenSans',
+           'cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff',
+           'cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-src('Open Sans Semibold', 'OpenSans-Semibold',
+           'MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff',
+           'MTP_ySUJH_bn48VBG8sNSugdm0LZdjqr5-oayXSOefg.woff2');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-src('Open Sans Bold', 'OpenSans-Bold',
+           'k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff',
+           'k3k702ZOKiLJc3WVjuplzOgdm0LZdjqr5-oayXSOefg.woff2');
+}
+
+$truncates {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+sl = 300
+r = 400
+sb = 600
+b = 700
+
+l1 = 25px
+l2 = 18px
+l3 = 15px
+l4 = 13px
+l5 = 10px
+l6 = 11px
+l7 = 8px
+
+font(level, weight, caps=false) {
+  @extend $truncates;
+  font-family: 'Open Sans';
+  font-size: level;
+  font-weight: weight;
+
+  if (caps) {
+    text-transform: uppercase;
+  }
+}

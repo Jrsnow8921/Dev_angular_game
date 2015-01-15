@@ -1,0 +1,15 @@
+# Apply with: patch -p0 < avoid-temp-dir-spam.patch
+--- node_modules/gulp-closure-compiler/index.js	2014-11-11 11:18:17.286113673 -0500
++++ node_modules/gulp-closure-compiler/index.js	2014-11-11 11:20:22.434615913 -0500
+@@ -22,8 +22,9 @@
+   var getFlagFilePath = function(files) {
+     var src = files.map(function(file) {
+       var relativePath = path.relative(file.cwd, file.path);
+-      var tempPath = tempWrite.sync(file.contents.toString(), relativePath);
+-      return '--js=' + tempPath;
++      // var tempPath = tempWrite.sync(file.contents.toString(), relativePath);
++      // return '--js=' + tempPath;
++      return '--js=' + relativePath;
+     }).join('\n');
+     return tempWrite.sync(src);
+   };

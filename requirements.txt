@@ -1,0 +1,56 @@
+initial demo
+
+requirements:
+-character list
+-party with 3-5 spaces in it
+-ability to add characters to party
+-When party has > 0 characters, button to send on adventure is enabled
+-send on adventure button loads map
+-map is populated with 3-5 dungeons
+-clicking on dungeon starts simulation
+-simulation is shown as text on page, line by line
+-summary/result is displayed after clicking out of simulation
+  - Alternative "just show me the result" button to skip simulation
+-engine logic should be minimal (use a random number to get different results each run)
+
+server:
+  - models:
+    -character
+    -map
+    -party
+    -dungeon
+    -sim?
+
+  -non rest actions:
+   - add character to party
+   - single select of a dungeon
+   - begin simulation
+   - get sim lines?
+
+client:
+  routes:
+    -level-a:
+      - has character list, party slots, and start adventure button
+    -level-b:
+      - has map, dungeons, current party
+    -level-c:
+      - has sim result, party, dungeon
+
+  services:
+    - character list service:
+      - contains the list of all characters
+    - party service:
+      - contains characters in the party as well as other party info
+    - map service:
+      - contains list of all dungeons on map
+    - dungeon service
+      - contains info about selected dungeon
+    - adventure service:
+      - contains info about the simulation of the dungeon for the current party
+
+  directives:
+    - party slot
+    - selectable character
+    - selectable dungeon
+
+

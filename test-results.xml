@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<testsuites>
+  <testsuite name="PhantomJS 1.9.8 (Linux)" package="" timestamp="2014-12-09T13:29:15" id="0" hostname="localhost.localdomain" tests="1" errors="0" failures="0" time="0.006">
+    <properties>
+      <property name="browser.fullName" value="Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34"/>
+    </properties>
+    <testcase name="should initialise the controller" time="0.006" classname="PhantomJS 1.9.8 (Linux).UT: app_AppController FUNCTION: constructor"/>
+    <system-out><![CDATA[
+]]></system-out>
+    <system-err/>
+  </testsuite>
+</testsuites>
